@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+a {
+    background: rgba(158, 31, 158, 0.867);
+    color: #fff;
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 20px;
+    text-decoration: none;
+    position: relative;
+    transition: all .5s;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(17, 31, 219, 0.867);
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: all .5s;
+}
+
+a:hover {
+    background: none;
+}
+
+a:hover::after {
+    width: 100%;
+}
